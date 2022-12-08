@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Finished\\QuietGuest_docs\\keystore.jks')
+            storePassword 'pusich333'
+            keyAlias 'key'
+            keyPassword 'pusich333'
+        }
+        release {
+            storeFile file('D:\\Finished\\QuietGuest_docs\\keystore.jks')
+            storePassword 'pusich333'
+            keyAlias 'key'
+            keyPassword 'pusich333'
+        }
+    }
+    compileSdk 33
+
+
+
+    defaultConfig {
+        applicationId "com.slevinto.vevaio"
+        minSdk 30
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testApplicationId 'com.slevinto.vevaio'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    // enable viewBinding
+    buildFeatures
+    {
+        viewBinding true
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0"
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.google.firebase:firebase-auth:21.0.6'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.5'
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    implementation fileTree(include: ["*.jar"], dir: "libs")
+    implementation "androidx.appcompat:appcompat:1.4.2"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+
+    //dependencies for recognition
+    implementation "com.google.android.gms:play-services-location:20.0.0"
+    implementation "com.google.android.gms:play-services-wearable:17.1.0"
+
+    // dependencies for network and others
+    implementation "com.google.code.gson:gson:2.8.9"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+
+    implementation "io.reactivex.rxjava2:rxjava:2.2.10"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
+
+    // dependencies for background sync (Google Fit, Samsung Health)
+    implementation "androidx.work:work-runtime:2.7.1"
+    implementation "androidx.work:work-runtime-ktx:2.7.1"
+    implementation "androidx.work:work-gcm:2.7.1"
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.0"
+    implementation "androidx.lifecycle:lifecycle-process:2.5.0"
+
+    implementation "androidx.concurrent:concurrent-futures:1.1.0"
+    implementation "androidx.concurrent:concurrent-futures-ktx:1.1.0"
+
+    // dependencies for Google Fit
+    implementation "com.google.android.gms:play-services-auth:20.2.0"
+    implementation "com.google.android.gms:play-services-fitness:21.1.0"
+
+    // dependencies for internal database systems
+    implementation "androidx.room:room-runtime:2.4.2"
+    implementation "androidx.room:room-ktx:2.4.2"
+    implementation "androidx.annotation:annotation:1.4.0"
+
+    // dependencies for encryption/auth mechanisms
+    implementation "net.zetetic:android-database-sqlcipher:4.5.0"
+    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+
+    implementation "com.wdullaer:materialdatetimepicker:4.2.3"
+
+    implementation files("../thryve_core_sdk_4.9.6.aar")
+    implementation files("../thryve_module_commons_4.9.6.aar")
+    implementation files("../thryve_module_recognition_4.9.6.aar")
+    implementation files("../thryve_module_shealth_4.9.6.aar")
+    implementation files("../thryve_module_bgm_4.9.6.aar")
+    implementation files("../thryve_module_cardio_4.9.6.aar")
+    implementation files("../thryve_module_gfit_4.9.6.aar")
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.hbb20:ccp:2.5.3'
+    implementation 'com.sun.mail:android-mail:1.6.3'
+    implementation 'com.sun.mail:android-activation:1.6.3'
+
+    // For Health Connect
+    implementation "androidx.health:health-connect-client:1.0.0-alpha02"
+    implementation "androidx.compose.ui:ui:1.1.1"
+    implementation "androidx.compose.material:material:1.1.1"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.1.1"
+    implementation "androidx.activity:activity-compose:1.5.0"
+    implementation "androidx.navigation:navigation-compose:2.5.0"
+
+    implementation("com.google.android.gms:play-services-fitness:21.1.0")
+    implementation("com.google.android.gms:play-services-auth:20.2.0")
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <NumberPicker
+        android:id="@+id/numberPickerFeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/numberPickerFeet" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerCm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/numberPickerFeet" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerMeasure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/numberPickerInch" />
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberPickerFeet"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="98dp"
+        android:layout_alignEnd="@+id/numberPickerMeasure"
+        android:text="OK" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonOK"
+        android:layout_alignBottom="@+id/buttonOK"
+        android:layout_marginRight="16dp"
+        android:layout_alignStart="@+id/numberPickerFeet"
+        android:text="Cancel" />
+
+</RelativeLayout>

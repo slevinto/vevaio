@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@drawable/gradient_background" >
+
+    <TextView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="31.24dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="VeVaio"
+        android:textAppearance="@style/TextLogoStyle" />
+
+    <TextView
+        android:id="@+id/tv_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="What is your"
+        android:textAppearance="@style/TextTitleStyle" />
+    <TextView
+        android:id="@+id/tv_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="height?"
+        android:textAppearance="@style/TextTitleStyle" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_gravity="center_horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Click to choose height"
+                android:textAppearance="@style/TextDescriptionStyle" />
+
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_height"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/textline" />
+
+            <TextView
+                android:id="@+id/tv_wordcm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_line"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAppearance="@style/TextDescriptionStyle" />
+
+        </RelativeLayout></ScrollView>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/button_rectangle"
+        android:layout_marginBottom="80dp"
+        android:text="Continue"
+        android:textAppearance="@style/TextDescriptionStyle" />
+</LinearLayout>

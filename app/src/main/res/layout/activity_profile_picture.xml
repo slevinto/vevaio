@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="31.24dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="VeVaio"
+        android:textAppearance="@style/TextLogoStyle" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:text="Profile photo"
+        android:textAppearance="@style/TextTitleStyle" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_gravity="center_horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <com.slevinto.vevaio.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:id="@+id/buttonLoadPicture"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_photo"
+                android:background="@drawable/button_circle" />
+
+            <TextView
+                android:id="@+id/tv_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonLoadPicture"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Upload your profile photo"
+                android:textAppearance="@style/TextDescriptionStyle" />
+        </RelativeLayout></ScrollView>
+    <RelativeLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp" >
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_rectangle"
+            android:text="Continue"
+            android:textAppearance="@style/TextDescriptionStyle" />
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_continue"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_skip"
+            android:text="Skip"
+            android:textAppearance="@style/TextDescriptionStyle" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+

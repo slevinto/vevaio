@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@drawable/gradient_background" >
+
+    <TextView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="31.24dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="VeVaio"
+        android:textAppearance="@style/TextLogoStyle" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:text="Sign up"
+        android:textAppearance="@style/TextTitleStyle" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_gravity="center_horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/et_email"
+                android:text="Email address"
+                android:textAppearance="@style/TextDescriptionStyle" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rectangle"
+                android:layout_below="@id/tv_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:hint="User name"
+                android:paddingStart="10dp"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_email"
+                android:layout_alignStart="@+id/et_password"
+                android:layout_marginTop="20dp"
+                android:text="Password"
+                android:textAppearance="@style/TextDescriptionStyle" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rectangle"
+                android:layout_below="@id/tv_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:hint="Password"
+                android:paddingStart="10dp"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_repeat_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_password"
+                android:layout_alignStart="@+id/et_password"
+                android:layout_marginTop="20dp"
+                android:text="Password again"
+                android:textAppearance="@style/TextDescriptionStyle" />
+            <EditText
+                android:id="@+id/et_repeat_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rectangle"
+                android:layout_below="@id/tv_repeat_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:hint="Repeat password"
+                android:paddingStart="10dp"
+                android:inputType="textPassword" />
+        </RelativeLayout></ScrollView>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_rectangle"
+        android:text="Continue"
+        android:textAppearance="@style/TextDescriptionStyle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:id="@+id/ll_text"
+        android:layout_margin = "40dp">
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you have an account please "
+            android:textAppearance="@style/TextPrimaryDescriptionStyle" />
+        <TextView
+            android:id="@+id/tv_register_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textAppearance="@style/TextPrimaryDescriptionStyle" />
+    </LinearLayout>
+</LinearLayout>
+
+
+

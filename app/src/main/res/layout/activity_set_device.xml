@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@drawable/gradient_background" >
+
+    <TextView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="31.24dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="VeVaio"
+        android:textAppearance="@style/TextLogoStyle" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:text="Connect device"
+        android:textAppearance="@style/TextTitleStyle" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_gravity="center_horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Choose type"
+                android:textAppearance="@style/TextDescriptionStyle" />
+
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_type"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_rectangle"
+                android:paddingStart="10dp"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:layout_alignEnd="@id/spinner_type"
+                android:layout_below="@id/spinner_type"
+                android:layout_marginTop="-35dp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_type"
+                android:layout_marginTop="20dp"
+                android:text="Choose model"
+                android:textAppearance="@style/TextDescriptionStyle" />
+
+            <Spinner
+                android:id="@+id/spinner_model"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_model"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_rectangle"
+                android:paddingStart="10dp"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:layout_alignEnd="@id/spinner_model"
+                android:layout_below="@id/spinner_model"
+                android:layout_marginTop="-35dp"
+                android:layout_marginEnd="15dp" />
+        </RelativeLayout></ScrollView>
+    <RelativeLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp" >
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_rectangle"
+            android:text="Continue"
+            android:textAppearance="@style/TextDescriptionStyle" />
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_continue"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_skip"
+            android:text="Skip"
+            android:textAppearance="@style/TextDescriptionStyle" />
+    </RelativeLayout>
+</LinearLayout>
+

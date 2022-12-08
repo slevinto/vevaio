@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.slevinto.vevaio">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <queries>
+        <package android:name="com.google.android.apps.healthdata" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/playstore"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/playstore_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vevaio"
+        tools:targetApi="31">
+        <activity
+            android:name=".EmergencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddCaregiverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LetsGetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePictureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeighActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirthdayActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".PersonalInfoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".VerifyPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterMobileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterGoogleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GarminScaleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GoogleFitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthConnect"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="health_permissions"
+                android:resource="@array/health_permissions" />
+        </activity>
+        <activity
+            android:name=".OverviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetBrandActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetDeviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CommonRegisterActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+    </application>
+
+</manifest>
