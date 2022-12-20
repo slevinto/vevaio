@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:weightSum="8"
+        tools:context=".SettingsFirstActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageButton
+            android:id="@+id/btn_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/go_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.013"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+
+        <TextView
+            android:id="@+id/tv_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:text="@string/settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_myaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/my_account"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/btn_caregiver_b"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="@string/my_account"
+            android:src="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_myaccount"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/tv_namesettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_caregiver_b"
+            app:layout_constraintTop_toTopOf="@+id/btn_caregiver_b"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <TextView
+            android:id="@+id/tv_personalinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/personal_info"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_caregiver_b"
+            app:layout_constraintTop_toBottomOf="@+id/tv_namesettings"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_generalsettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/general_settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_forward_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="@string/todo"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.831"
+            app:layout_constraintStart_toEndOf="@+id/btn_caregiver_b"
+            app:layout_constraintTop_toTopOf="@+id/btn_caregiver_b"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_devices"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="@string/my_accountn"
+            android:src="@drawable/ic_devices_watch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_generalsettings"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_cancel_caregiver_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="Devices"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_devices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintStart_toEndOf="@+id/btn_devices"
+            app:layout_constraintTop_toTopOf="@+id/btn_devices"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_forward_caregiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="Caregivers"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_caregivers"
+            app:layout_constraintEnd_toEndOf="@+id/btn_cancel_caregiver_b"
+            app:layout_constraintStart_toStartOf="@+id/btn_cancel_caregiver_b"
+            app:layout_constraintTop_toTopOf="@+id/btn_caregivers"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <ImageButton
+            android:id="@+id/btn_sos"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="Sos"
+            android:src="@drawable/ic_sos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_caregivers"
+            app:layout_constraintStart_toStartOf="@+id/btn_caregivers"
+            app:layout_constraintTop_toBottomOf="@+id/btn_caregivers"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_forward_sos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="Sos"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_sos"
+            app:layout_constraintEnd_toEndOf="@+id/btn_arrow_forward_caregiver"
+            app:layout_constraintStart_toStartOf="@+id/btn_arrow_forward_caregiver"
+            app:layout_constraintTop_toTopOf="@+id/btn_sos"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <ImageButton
+            android:id="@+id/btn_languages"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="Language"
+            android:src="@drawable/ic_language"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_sos"
+            app:layout_constraintStart_toStartOf="@+id/btn_sos"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sos"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_forward_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="Language"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_languages"
+            app:layout_constraintEnd_toEndOf="@+id/btn_arrow_forward_sos"
+            app:layout_constraintStart_toStartOf="@+id/btn_arrow_forward_sos"
+            app:layout_constraintTop_toTopOf="@+id/btn_languages"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <ImageButton
+            android:id="@+id/btn_faq"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="FAQ"
+            android:src="@drawable/ic_faq"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_languages"
+            app:layout_constraintStart_toStartOf="@+id/btn_languages"
+            app:layout_constraintTop_toBottomOf="@+id/btn_languages"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_forward_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="FAQ"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_faq"
+            app:layout_constraintEnd_toEndOf="@+id/btn_arrow_forward_language"
+            app:layout_constraintStart_toStartOf="@+id/btn_arrow_forward_language"
+            app:layout_constraintTop_toTopOf="@+id/btn_faq"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <ImageButton
+            android:id="@+id/btn_support"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="Support"
+            android:src="@drawable/ic_support"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_faq"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="@+id/btn_faq"
+            app:layout_constraintTop_toBottomOf="@+id/btn_faq"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_arrow_forward_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_circle_b"
+            android:contentDescription="Support"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_support"
+            app:layout_constraintEnd_toEndOf="@+id/btn_arrow_forward_faq"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_arrow_forward_faq"
+            app:layout_constraintTop_toTopOf="@+id/btn_support"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+
+        <TextView
+            android:id="@+id/tv_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/devices"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_devices"
+            app:layout_constraintEnd_toStartOf="@+id/btn_cancel_caregiver_b"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_devices"
+            app:layout_constraintTop_toTopOf="@+id/btn_devices" />
+
+        <TextView
+            android:id="@+id/tv_caregivers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/caregivers"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_caregivers"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_caregiver"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_caregivers"
+            app:layout_constraintTop_toTopOf="@+id/btn_caregivers" />
+
+        <ImageButton
+            android:id="@+id/btn_caregivers"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_circle_a_small"
+            android:contentDescription="Caregivers"
+            android:src="@drawable/ic_caregiver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btn_devices"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_devices"
+            app:layout_constraintTop_toBottomOf="@+id/btn_devices"
+            app:layout_constraintVertical_bias="0.012"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/tv_sos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/sos"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_sos"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_sos"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_sos"
+            app:layout_constraintTop_toTopOf="@+id/btn_sos" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/language"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_languages"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_language"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_languages"
+            app:layout_constraintTop_toTopOf="@+id/btn_languages" />
+
+        <TextView
+            android:id="@+id/tv_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/faq"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_faq"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_faq"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_faq"
+            app:layout_constraintTop_toTopOf="@+id/btn_faq" />
+
+        <TextView
+            android:id="@+id/tv_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/support"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_support"
+            app:layout_constraintEnd_toStartOf="@+id/btn_arrow_forward_support"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btn_support"
+            app:layout_constraintTop_toTopOf="@+id/btn_support" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

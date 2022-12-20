@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +37,7 @@ class FormatTimestamp : ValueFormatter() {
 
 class OverviewActivity : AppCompatActivity() {
 
+    private lateinit var btnSettings: ImageButton
     private lateinit var tvHello: TextView
     private lateinit var graphHeartRate: LineChart
     var heartRateList: ArrayList<Entry> = ArrayList()
@@ -57,8 +58,7 @@ class OverviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overview)
-        setSupportActionBar(findViewById(R.id.main_toolbar))
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        btnSettings = findViewById(R.id.btn_settings)
 
         val b = intent.extras
 
@@ -74,6 +74,15 @@ class OverviewActivity : AppCompatActivity() {
             name,
             SetBrandActivity.language
         )
+
+        btnSettings.setOnClickListener {
+            val i = Intent(this, SettingsFirstActivity::class.java)
+            val bndl = Bundle()
+            bndl.putString("displayname", displayname)
+            i.putExtras(bndl)
+            startActivity(i)
+        }
+
 
         tvHello = findViewById(R.id.tv_hello)
         tvHello.text = "${tvHello.text} ${displayname}"
@@ -313,11 +322,7 @@ class OverviewActivity : AppCompatActivity() {
         })
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        super.onCreateOptionsMenu(menu)
-        menuInflater.inflate(R.menu.nav_menu,menu)
-        return true
-    }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){

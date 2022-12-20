@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".OverviewActivity"
-    android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".OverviewActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,14 +18,24 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/main_toolbar"
-                android:layout_width="120dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="-60dp"
-                android:layout_marginTop="20dp"
-                android:layout_alignParentStart="true">
-            </androidx.appcompat.widget.Toolbar>
+
+            <ImageButton
+                android:id="@+id/btn_settings"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/settings"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.013"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_settings"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
                 android:id="@+id/iv_logo"
@@ -44,9 +54,9 @@
                 android:id="@+id/tv_hello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome back,"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
+                android:text="Welcome back,"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -54,9 +64,9 @@
                 android:id="@+id/tv_overview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hello"
                 android:layout_centerHorizontal="true"
                 android:text="Here's your overview"
-                android:layout_below="@id/tv_hello"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
         </RelativeLayout>
@@ -72,50 +82,50 @@
                 android:id="@+id/tv_heart_rate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:text="Heart Rate"
                 android:textColor="@color/purple_700"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp" />
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.LineChart
-                android:layout_height="200dip"
-                android:layout_width="match_parent"
                 android:id="@+id/graphHeartRate"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
                 android:layout_below="@id/tv_heart_rate" />
 
             <TextView
                 android:id="@+id/tv_steps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/graphHeartRate"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:text="Steps"
                 android:textColor="@color/purple_700"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_below="@id/graphHeartRate"
-                android:layout_marginTop="20dp" />
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.LineChart
-                android:layout_height="200dip"
-                android:layout_width="match_parent"
                 android:id="@+id/graphSteps"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
                 android:layout_below="@id/tv_steps" />
 
             <TextView
                 android:id="@+id/tv_active_burned_calories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/graphSteps"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:text="Burned Calories"
                 android:textColor="@color/purple_700"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_below="@id/graphSteps"
-                android:layout_marginTop="20dp" />
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.LineChart
-                android:layout_height="200dip"
-                android:layout_width="match_parent"
                 android:id="@+id/graphActiveBurnedCalories"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
                 android:layout_below="@id/tv_active_burned_calories"
                 android:layout_marginTop="20dp" />
 
@@ -123,17 +133,17 @@
                 android:id="@+id/tv_activity_duration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/graphActiveBurnedCalories"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:text="Activity Duration"
                 android:textColor="@color/purple_700"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_below="@id/graphActiveBurnedCalories"
-                android:layout_marginTop="20dp" />
+                android:textSize="20sp" />
 
             <com.github.mikephil.charting.charts.LineChart
-                android:layout_height="200dip"
-                android:layout_width="match_parent"
                 android:id="@+id/graphActivityDuration"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
                 android:layout_below="@id/tv_activity_duration"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp" />
