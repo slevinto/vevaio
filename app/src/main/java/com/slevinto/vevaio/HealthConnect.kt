@@ -225,11 +225,11 @@ class HealthConnect : AppCompatActivity() {
         var healthConnectAvailability = ""
 
         val permissions: Set<Permission> = setOf(
-            Permission.createReadPermission(Steps::class),
-            Permission.createReadPermission(Distance::class),
-            Permission.createReadPermission(SpeedSeries::class),
-            Permission.createReadPermission(TotalCaloriesBurned::class),
-            Permission.createReadPermission(HeartRateSeries::class)
+            //Permission.createReadPermission(Steps::class),
+            //Permission.createReadPermission(Distance::class),
+            //Permission.createReadPermission(SpeedSeries::class),
+            //Permission.createReadPermission(TotalCaloriesBurned::class),
+            //Permission.createReadPermission(HeartRateSeries::class)
         )
 
         private fun isPackageInstalled(

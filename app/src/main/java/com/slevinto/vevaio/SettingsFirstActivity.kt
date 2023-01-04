@@ -82,12 +82,17 @@ class SettingsFirstActivity : AppCompatActivity() {
         }
         btnFaq = findViewById(R.id.btn_faq)
         btnArrowForwardFaq = findViewById(R.id.btn_arrow_forward_faq)
+        btnArrowForwardFaq.setOnClickListener{
+            val ih = Intent(this, FAQActivity::class.java)
+            startActivity(ih)
+        }
+
         btnSupport = findViewById(R.id.btn_support)
 
         btnArrowForwardSupport = findViewById(R.id.btn_arrow_forward_support)
         btnArrowForwardSupport.setOnClickListener{
-            val ih = Intent(this, SupportActivity::class.java)
-            startActivity(ih)
+            val ii = Intent(this, SupportActivity::class.java)
+            startActivity(ii)
         }
     }
 }

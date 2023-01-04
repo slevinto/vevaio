@@ -24,7 +24,7 @@ class CaregiverFirstActivity : AppCompatActivity() {
 
         btnReturn = findViewById(R.id.btn_return)
         btnReturn.setOnClickListener{
-            val i = Intent(this, SettingsFirstActivity::class.java)
+            val i = Intent(this, CaregiversActivity::class.java)
             startActivity(i)
         }
 

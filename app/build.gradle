@@ -27,8 +27,8 @@ android {
         applicationId "com.slevinto.vevaio"
         minSdk 30
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testApplicationId 'com.slevinto.vevaio'
@@ -59,32 +59,33 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    namespace 'com.slevinto.vevaio'
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation 'com.google.firebase:firebase-auth:21.0.6'
-    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.1'
-    implementation 'com.google.firebase:firebase-database-ktx:20.0.5'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.2'
+    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
     implementation platform('com.google.firebase:firebase-bom:30.4.1')
     implementation 'com.google.firebase:firebase-auth-ktx'
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
 
     implementation fileTree(include: ["*.jar"], dir: "libs")
-    implementation "androidx.appcompat:appcompat:1.4.2"
+    implementation "androidx.appcompat:appcompat:1.5.1"
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
 
     //dependencies for recognition
-    implementation "com.google.android.gms:play-services-location:20.0.0"
-    implementation "com.google.android.gms:play-services-wearable:17.1.0"
+    implementation "com.google.android.gms:play-services-location:21.0.1"
+    implementation "com.google.android.gms:play-services-wearable:18.0.0"
 
     // dependencies for network and others
     implementation "com.google.code.gson:gson:2.8.9"
@@ -99,24 +100,24 @@ dependencies {
     implementation "androidx.work:work-runtime-ktx:2.7.1"
     implementation "androidx.work:work-gcm:2.7.1"
 
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.0"
-    implementation "androidx.lifecycle:lifecycle-process:2.5.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-process:2.5.1"
 
     implementation "androidx.concurrent:concurrent-futures:1.1.0"
     implementation "androidx.concurrent:concurrent-futures-ktx:1.1.0"
 
     // dependencies for Google Fit
-    implementation "com.google.android.gms:play-services-auth:20.2.0"
+    implementation "com.google.android.gms:play-services-auth:20.4.0"
     implementation "com.google.android.gms:play-services-fitness:21.1.0"
 
     // dependencies for internal database systems
-    implementation "androidx.room:room-runtime:2.4.2"
-    implementation "androidx.room:room-ktx:2.4.2"
-    implementation "androidx.annotation:annotation:1.4.0"
+    implementation "androidx.room:room-runtime:2.4.3"
+    implementation "androidx.room:room-ktx:2.4.3"
+    implementation "androidx.annotation:annotation:1.5.0"
 
     // dependencies for encryption/auth mechanisms
     implementation "net.zetetic:android-database-sqlcipher:4.5.0"
-    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+    implementation "androidx.security:security-crypto:1.1.0-alpha04"
 
     implementation "com.wdullaer:materialdatetimepicker:4.2.3"
 
@@ -134,15 +135,15 @@ dependencies {
     implementation 'com.sun.mail:android-activation:1.6.3'
 
     // For Health Connect
-    implementation "androidx.health:health-connect-client:1.0.0-alpha02"
-    implementation "androidx.compose.ui:ui:1.1.1"
-    implementation "androidx.compose.material:material:1.1.1"
-    implementation "androidx.compose.ui:ui-tooling-preview:1.1.1"
-    implementation "androidx.activity:activity-compose:1.5.0"
-    implementation "androidx.navigation:navigation-compose:2.5.0"
+    implementation "androidx.health:health-connect-client:1.0.0-alpha03"
+    implementation "androidx.compose.ui:ui:1.3.2"
+    implementation "androidx.compose.material:material:1.3.1"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.3.2"
+    implementation "androidx.activity:activity-compose:1.6.1"
+    implementation "androidx.navigation:navigation-compose:2.5.3"
 
     implementation("com.google.android.gms:play-services-fitness:21.1.0")
-    implementation("com.google.android.gms:play-services-auth:20.2.0")
-    implementation "androidx.core:core-ktx:+"
+    implementation("com.google.android.gms:play-services-auth:20.4.0")
+    implementation "androidx.core:core-ktx:1.9.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

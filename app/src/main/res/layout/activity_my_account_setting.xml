@@ -14,6 +14,18 @@
         android:orientation="vertical"
         android:weightSum="8">
 
+        <com.slevinto.vevaio.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings"
+            app:layout_constraintVertical_bias="0.0" />
+
         <ImageButton
             android:id="@+id/btn_return"
             android:layout_width="wrap_content"
@@ -49,7 +61,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id="@+id/btn_caregiver_b"
+            android:id="@+id/btn_photo_my_account"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="15dp"
@@ -76,7 +88,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_firstname"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintTop_toBottomOf="@+id/btn_photo_my_account"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -91,7 +103,7 @@
             app:layout_constraintEnd_toEndOf="@+id/et_firstname"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/et_firstname"
-            app:layout_constraintTop_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintTop_toBottomOf="@+id/btn_photo_my_account"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
@@ -148,7 +160,7 @@
             app:layout_constraintEnd_toEndOf="@+id/et_lastname"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/et_lastname"
-            app:layout_constraintTop_toBottomOf="@+id/btn_caregiver_b"
+            app:layout_constraintTop_toBottomOf="@+id/btn_photo_my_account"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
