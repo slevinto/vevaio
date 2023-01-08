@@ -736,101 +736,14 @@
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
-
         <LinearLayout
-            android:id="@+id/footer"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="48dp"
-            android:background="#181D36"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.940"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
-
-            <Button
-                android:id="@+id/medical"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginVertical="8dp"
-                android:background="#181D36"
-                android:drawableTop="@drawable/ic_medical"
-                android:gravity="center"
-                android:text="Medical"
-                android:textColor="#FFFFFF"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/share"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginVertical="8dp"
-                android:background="#181D36"
-                android:drawableTop="@drawable/ic_share"
-                android:gravity="center"
-                android:text="Share info"
-                android:textColor="#FFFFFF"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-            <Button
-                android:id="@+id/chat"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginVertical="8dp"
-                android:background="#181D36"
-                android:drawableTop="@drawable/ic_chat"
-                android:gravity="center"
-                android:text="Chat"
-                android:textColor="#FFFFFF"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/wellness"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginVertical="8dp"
-                android:background="#181D36"
-                android:drawableTop="@drawable/ic_wellness"
-                android:gravity="center"
-                android:text="Wellness"
-                android:textColor="#FFFFFF"
-                android:textSize="8sp"
-                android:textStyle="bold" />
+        <include layout="@layout/footer" />
         </LinearLayout>
-        <ImageButton
-            android:id="@+id/sos"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/button_circle_a_sos"
-            android:contentDescription="SOS"
-            android:src="@drawable/ic_sos"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-            android:layout_marginTop="20dp" />
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="220dp"
-            android:background="@drawable/button_circle_red"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="3"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:textStyle="bold" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

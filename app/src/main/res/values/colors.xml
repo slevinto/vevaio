@@ -10,4 +10,5 @@
     <color name="title">#47505A</color>
     <color name="button">#AF4DA4</color>
     <color name="border">#B7BCD6</color>
+    <color name="graph">#0FBEDF</color>
 </resources>
